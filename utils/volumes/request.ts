@@ -9,7 +9,7 @@ export const createVolumesRequest = async (
 
   Object.entries(params).forEach(([key, value]) => {
     if (value) {
-      url.searchParams.append(key, value);
+      url.searchParams.append(key, String(value));
     }
   });
 
