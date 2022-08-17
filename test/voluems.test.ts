@@ -1,4 +1,4 @@
-import { createVolumesRequest, VolumesQueryBuilder } from "../utils/mod.ts";
+import { createVolumesRequest, VolumesQueryBuilder } from "../mod.ts";
 import { assertEquals } from "../deps.ts";
 
 Deno.test("simple fetch /volumes", async () => {
