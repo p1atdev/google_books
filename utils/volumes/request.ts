@@ -7,7 +7,11 @@ export const createVolumesRequest = async (
 ): Promise<VolumesResponse> => {
   const url = new URL(endpoint);
 
-  url.searchParams.append("q", params.q);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value) {
+      url.searchParams.append(key, value);
+    }
+  });
 
   const res: VolumesResponse = await fetch(url.toString()).then((res) =>
     res.json()

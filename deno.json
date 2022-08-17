@@ -1,5 +1,6 @@
 {
   "tasks": {
-    "test": "deno test --allow-net"
+    "test": "deno test --allow-net",
+    "test:cov": "deno test -A --coverage=coverage && deno coverage ./coverage --lcov --output=coverage.lcov"
   }
 }
